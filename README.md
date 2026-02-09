@@ -1,6 +1,6 @@
 # ☁️ Left 4 Dead 2 Dedicated Server – Docker Image
 
-> Powered by Debian Slim + SteamCMD  + RCON 🌈🫧
+> Powered by Debian Bookworm Slim + SteamCMD  + RCON 🌈🫧
 
 ¡Bienvenido! Esta es una imagen de Docker optimizada para correr un servidor dedicado de **Left 4 Dead 2**, pensada para integrarse con [Pterodactyl](https://pterodactyl.io) y mantenerse ligera, estable y bonita ✨.
 

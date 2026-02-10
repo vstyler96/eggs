@@ -13,6 +13,14 @@ jobs:
       contents: read
       packages: write
 
+    strategy:
+      matrix:
+        include:
+          - dockerfile: Dockerfile.bookworm
+            image_tag: l4d2-bookworm
+          - dockerfile: Dockerfile.trixie
+            image_tag: l4d2-trixie
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,5 +36,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
+          file: ${{ matrix.dockerfile }}
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/l4d2-bookworm:latest
+          tags: ghcr.io/${{ github.repository_owner }}/${{ matrix.image_tag }}:latest
